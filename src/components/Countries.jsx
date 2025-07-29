@@ -30,12 +30,8 @@ function Countries ({ searchCountry }) {
             justifyContent: "center",
             margin: "15px"
         }}>
-            {filteredCountries.length > 0 ? (
+            {filteredCountries.length > 0 && (
                 filteredCountries.map((country) => (
-                    <CardComponent name={country.common} flag={country.png} alt={country.common}/>
-                ))
-            ) : (
-                countries.map((country) => (
                     <CardComponent name={country.common} flag={country.png} alt={country.common}/>
                 ))
             )}
